@@ -4,8 +4,6 @@ import com.cgvsu.model.Model;
 import com.cgvsu.model.Polygon;
 
 import java.util.ArrayList;
-import java.util.Set;
-import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -13,11 +11,11 @@ import java.util.stream.IntStream;
 
 public class DetachedChecker {
 
-    private TreeSet<Integer> canDeleteVertices;
-    private TreeSet<Integer> canDeleteNormals;
-    private TreeSet<Integer> canDeleteVT;
+    private final TreeSet<Integer> canDeleteVertices;
+    private final TreeSet<Integer> canDeleteNormals;
+    private final TreeSet<Integer> canDeleteVT;
 
-    private Model model;
+    private final Model model;
 
     public DetachedChecker(TreeSet<Integer> canDeleteVertices, TreeSet<Integer> canDeleteNormals, TreeSet<Integer> canDeleteVT, Model model) {
         this.canDeleteVertices = canDeleteVertices;
